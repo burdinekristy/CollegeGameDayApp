@@ -1,5 +1,6 @@
 package gameday.teams;
 
+
 public class Team {
     private String name;
     private String mascot;
@@ -27,10 +28,5 @@ public class Team {
 
     public int getRanking() {
         return ranking;
-    }
-
-    @Override
-    public String toString() {
-        return name + " (" + mascot + ") - " + conference + " - Rank: " + ranking;
     }
 }

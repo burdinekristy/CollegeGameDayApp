@@ -1,11 +1,12 @@
 package gameday.teams;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class TeamManager {
     private List<Team> teams = new ArrayList<>();
-
+    
     public TeamManager() {
         loadTeams();
     }
@@ -16,6 +17,7 @@ public class TeamManager {
         teams.add(new Team("Georgia", "Bulldogs", "SEC", 3));
         teams.add(new Team("Michigan", "Wolverines", "Big Ten", 4));
         teams.add(new Team("Texas", "Longhorns", "Big 12", 5));
+        // Add more teams as needed
     }
 
     public List<Team> getTeams() {
