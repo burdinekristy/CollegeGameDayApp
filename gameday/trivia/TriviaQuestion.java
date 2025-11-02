@@ -1,6 +1,9 @@
 package gameday.trivia;
 
 public class TriviaQuestion {
+    public String getAnswer() {
+        return answer;
+    }
     private String question;
     private String answer;
 
