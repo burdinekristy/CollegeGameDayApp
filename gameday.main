@@ -1,0 +1,66 @@
+package gameday.main;
+
+import gameday.teams.TeamSelectionApp;
+import gameday.tailgate.TailgateApp;
+import gameday.predictions.PredictionApp;
+import gameday.trivia.TriviaApp;
+import gameday.scores.ScoreApp;
+import gameday.store.StoreApp;
+import gameday.map.MapApp;
+import gameday.schedule.ScheduleApp;
+
+import java.util.Scanner;
+
+public class CollegeGameDayApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("\nWelcome to the College GameDay Experience!");
+            System.out.println("1. Team Selection");
+            System.out.println("2. TailgatePlanning");
+            System.out.println("3. Game Predictions");
+            System.out.println("4. Mini Games & Trivia");
+            System.out.println("5. Live Score Updates");
+            System.out.println("6. Merchandise Store");
+            System.out.println("7. Campus Map");
+            System.out.println("8. Event Schedule");
+            System.out.println("9. Exit");
+
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case 1:
+                    TeamSelectionApp.main(new String[]{});
+                    break;
+                case 2:
+                    TailgateApp.main(new String[]{});
+                    break;
+                case 3:
+                    PredictionApp.main(new String[]{});
+                    break;
+                case 4:
+                    TriviaApp.main(new String[]{});
+                    break;
+                case 5:
+                    ScoreApp.main(new String[]{});
+                    break;
+                case 6:
+                    StoreApp.main(new String[]{});
+                    break;
+                case 7:
+                    MapApp.main(String[]{});
+                    break;
+                case 8:
+                    ScheduleApp.main(new String[]{});
+                    break;
+                case 9:
+                    System.out.println("Thanks for using College GameDay Experiece!");
+                    scanner.close();
+                    return;
+                defualt:
+                    System.out.println("Invalid option. Try again.");
+            }
+        }
+    }
+}
